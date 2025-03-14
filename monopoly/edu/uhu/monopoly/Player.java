@@ -178,7 +178,7 @@ public class Player {
 	public void purchase() {
 		if(getPosition().isAvailable()) {
 			Cell c = getPosition();
-			c.setAvailable(false);
+			c.setAvailable(false, null);
 			if(c instanceof PropertyCell) {
 				PropertyCell cell = (PropertyCell)c;
 				purchaseProperty(cell);

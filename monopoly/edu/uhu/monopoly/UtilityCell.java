@@ -10,8 +10,6 @@ public class UtilityCell extends Cell {
 	}
 
 	private boolean available = true;
-	private boolean available = true;
-	private boolean available = true;
 
 	public int getPrice() {
 		return UtilityCell.PRICE;

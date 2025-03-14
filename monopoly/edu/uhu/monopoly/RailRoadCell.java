@@ -14,8 +14,6 @@ public class RailRoadCell extends Cell {
 	}
 
 	private boolean available = true;
-	private boolean available = true;
-	private boolean available = true;
 	
 	public int getPrice() {
 		return RailRoadCell.price;

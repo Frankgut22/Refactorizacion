@@ -7,8 +7,6 @@ public class PropertyCell extends Cell {
 	private int rent;
 	private int sellPrice;
 	private boolean available = true;
-	private boolean available = true;
-	private boolean available = true;
 
 	public String getColorGroup() {
 		return colorGroup;
@@ -29,13 +27,18 @@ public class PropertyCell extends Cell {
 	public int getRent() {
 		int rentToCharge = rent;
 		String [] monopolies = proprietary.getMonopolies();
+		rentToCharge = bucleRenta(rentToCharge, monopolies);
+		if(numHouses > 0) {
+			rentToCharge = rent * (numHouses + 1);
+		}
+		return rentToCharge;
+	}
+
+	private int bucleRenta(int rentToCharge, String[] monopolies) {
 		for(int i = 0; i < monopolies.length; i++) {
 			if(monopolies[i].equals(colorGroup)) {
 				rentToCharge = rent * 2;
 			}
-		}
-		if(numHouses > 0) {
-			rentToCharge = rent * (numHouses + 1);
 		}
 		return rentToCharge;
 	}
