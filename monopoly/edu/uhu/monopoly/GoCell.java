@@ -2,6 +2,8 @@ package edu.uhu.monopoly;
 
 public class GoCell extends Cell {
 	private boolean available = true;
+	private boolean available = true;
+	private boolean available = true;
 
 	public GoCell() {
 		super.setName("Go");
@@ -12,5 +14,13 @@ public class GoCell extends Cell {
 	}
 	
 	void setName(String name) {
+	}
+
+	public boolean isAvailable() {
+		return available;
+	}
+
+	public void setAvailable(boolean available) {
+		this.available = available;
 	}
 }

@@ -14,6 +14,8 @@ public class RailRoadCell extends Cell {
 	}
 
 	private boolean available = true;
+	private boolean available = true;
+	private boolean available = true;
 	
 	public int getPrice() {
 		return RailRoadCell.price;
@@ -31,5 +33,13 @@ public class RailRoadCell extends Cell {
 				currentPlayer.payRentTo(proprietary, getRent());
 			}
 		}
+	}
+
+	public boolean isAvailable() {
+		return available;
+	}
+
+	public void setAvailable(boolean available) {
+		this.available = available;
 	}
 }
