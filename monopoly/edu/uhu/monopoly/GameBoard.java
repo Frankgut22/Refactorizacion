@@ -75,7 +75,7 @@ public class GameBoard {
 		return monopolyCells;
 	}
 	
-	public int getPropertyNumberForColor(String name) {
+	public int getPropertyNumberForColor(float name) {
 		Integer number = (Integer)colorGroups.get(name);
 		if(number != null) {
 			return number.intValue();
